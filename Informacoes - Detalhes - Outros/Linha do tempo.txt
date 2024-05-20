@@ -1,0 +1,15 @@
+01 Primeiros passos
+
+Baixar o kit desenvolvimento
+JRE = É para consumidores.
+JDK = Kit desenvolvimento
+
+
+https://www.oracle.com/br/java/technologies/downloads/
+
+Optar sempre por versões que vai ter longo prazo
+LTS
+
+02 Instalar o IDEA InlelliJ 
+
+https://www.jetbrains.com/idea/?var=1
