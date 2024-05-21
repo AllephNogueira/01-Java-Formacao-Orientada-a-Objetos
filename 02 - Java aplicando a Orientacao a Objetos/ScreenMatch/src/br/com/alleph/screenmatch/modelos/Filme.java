@@ -1,20 +1,19 @@
 package br.com.alleph.screenmatch.modelos;
 
 public class Filme {
-    public String nome;
-    public int anoDeLancamento;
-    public boolean incuidoNoPlano;
+
+    private String nome;
+    private int anoDeLancamento;
+    private int duracaoEmMinutos;
+    private boolean incluidoNoPlano;
     private double somaDasAvaliacoes;
-    private int totalDeAvaliacoes; // Privado só pode ser acessado dentro da propria classe / Ou invocar ele dentro de um metodo para usar fora.
-    public int duracaoEmMinutos;
+    private int totalDeAvaliacoes;
 
-    public int getTotalDeAvaliacoes(){
-        return totalDeAvaliacoes;
-    }
-
-    public void exibiFichaTecnica() {   // Esse e meu metodo.
-        System.out.println("Nome do filme: " + nome);
-        System.out.println("Ano de lancamento: " + anoDeLancamento);
+    public void exibeFichaTecnica() {
+        System.out.println("Nome do filme: " +nome);
+        System.out.println("Ano de lançamento: " +anoDeLancamento);
+        System.out.println("Duração em minutos: " +duracaoEmMinutos);
+        System.out.println("Incluído no plano: " +incluidoNoPlano);
     }
 
     public void avalia(double nota) {
@@ -22,11 +21,44 @@ public class Filme {
         totalDeAvaliacoes++;
     }
 
-    public double calculaMedia() {
+    public double pegaMedia() {
         return somaDasAvaliacoes / totalDeAvaliacoes;
     }
 
-    public int idadeFilme(){
-        return 2024 - anoDeLancamento;
+    public String getNome() {
+        return this.nome;
     }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public int getAnoDeLancamento() {
+        return this.anoDeLancamento;
+    }
+
+    public void setAnoDeLancamento(int anoDeLancamento) {
+        this.anoDeLancamento = anoDeLancamento;
+    }
+
+    public boolean getIncluidoNoPlano() {
+        return this.incluidoNoPlano;
+    }
+
+    public void setIncluidoNoPlano(boolean incluidoNoPlano) {
+        this.incluidoNoPlano = incluidoNoPlano;
+    }
+
+    public int getDuracaoEmMinutos() {
+        return this.duracaoEmMinutos;
+    }
+
+    public void setDuracaoEmMinutos(int duracaoEmMinutos) {
+        this.duracaoEmMinutos = duracaoEmMinutos;
+    }
+
+    public int getTotalDeAvaliacoes() {
+        return this.totalDeAvaliacoes;
+    }
+
 }
