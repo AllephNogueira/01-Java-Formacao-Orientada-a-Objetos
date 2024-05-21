@@ -1,4 +1,5 @@
 import br.com.alleph.screenmatch.modelos.Filme;
+import br.com.alleph.screenmatch.modelos.Serie;
 
 public class Principal {
 
@@ -15,7 +16,24 @@ public class Principal {
         favorito.avalia(8);
         favorito.avalia(9);
 
-        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia());
+        System.out.println("Média de avaliações do filme: " +favorito.pegaMedia() + "\n\n\n");
+
+
+        Serie Vikings = new Serie();
+        Vikings.setNome("Vikings");
+        Vikings.setAnoDeLancamento(1999);
+
+        Vikings.setTemporadas(6);
+        Vikings.setEpisodiosPorTemporada(12);
+        Vikings.setMinutosPorEpisodio(60);
+        //System.out.println("Duracao da minha serie: " + Vikings.getDuracaoEmMinutos());
+
+
+        Vikings.setIncluidoNoPlano(true);
+
+
+        Vikings.exibeFichaTecnica();
+        Vikings.exibeFichaSerie();
     }
 
 }
