@@ -1,5 +1,6 @@
 import br.com.alleph.screenmatch.modelos.Filme;
 import br.com.alleph.screenmatch.modelos.Serie;
+import br.com.alleph.screenmatch.modelos.calculos.CalculadoraDeTempo;
 
 public class Principal {
 
@@ -34,6 +35,17 @@ public class Principal {
 
         Vikings.exibeFichaTecnica();
         Vikings.exibeFichaSerie();
+
+
+        CalculadoraDeTempo calculadora = new CalculadoraDeTempo();
+        calculadora.inclui(Vikings);
+        System.out.println("Tempo total da Serie: " + calculadora.getTempoTotal());
+
+
+
+        CalculadoraDeTempo calculadoraFilme = new CalculadoraDeTempo();
+        calculadora.inclui(favorito);
+        System.out.println("Tempo total do filme: " + calculadoraFilme.getTempoTotal());
     }
 
 }
