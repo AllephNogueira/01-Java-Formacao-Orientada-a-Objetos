@@ -47,4 +47,14 @@ public class Serie extends Titulo {
     public int getDuracaoEmMinutos() {
         return temporadas * episodiosPorTemporada * minutosPorEpisodio;
     }
+
+
+    @Override
+    public String toString() {
+
+        return "Serie: " + this.getNome() + " (" + this.getAnoDeLancamento() + ")";
+        //return super.toString(); Isso aqui significa, SUPER toString = devolva por padrao oque ja tem na classe mae
+        // Antes ele pegava nome da classe + @ + um codigo hexadecimal
+        // Agora ele pega essa informação que eu escolhi
+    }
 }

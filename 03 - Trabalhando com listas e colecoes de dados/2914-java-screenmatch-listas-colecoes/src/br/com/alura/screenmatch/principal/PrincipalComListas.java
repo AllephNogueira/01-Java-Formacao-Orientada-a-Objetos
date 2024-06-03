@@ -4,9 +4,7 @@ import br.com.alura.screenmatch.modelos.Filme;
 import br.com.alura.screenmatch.modelos.Serie;
 import br.com.alura.screenmatch.modelos.Titulo;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
+import java.util.*;
 
 public class PrincipalComListas {
     public static void main(String[] args) {
@@ -21,7 +19,7 @@ public class PrincipalComListas {
         serie2.avalia(6);
 
         // Criando minha ArrayList
-        ArrayList<Titulo> listaDeFilmes = new ArrayList<>(); // Observa que parametrizamos usando a classe mae
+        List<Titulo> listaDeFilmes = new ArrayList<>(); // Observa que parametrizamos usando a classe mae
         // Antigamente usavamos Filme, mas ai precisariamos criar 2 ArrayList, usando a classe mae podemos usar as 2 Classes filhas dentro do array
 
         // Adicionando na ArrayList
@@ -43,10 +41,10 @@ public class PrincipalComListas {
 
         //listaDeFilmes.forEach(System.out::println);
 
-        ArrayList<String> buscarPorArtistas = new ArrayList<>();
-        buscarPorArtistas.add("Z - Bruno Sorriso Maroto");
-        buscarPorArtistas.add("Y - Luan Santana");
-        buscarPorArtistas.add("A - Pedro Sampaio");
+        List<String> buscarPorArtistas = new ArrayList<>();
+        buscarPorArtistas.add("Bruno Sorriso Maroto");
+        buscarPorArtistas.add("Luan Santana");
+        buscarPorArtistas.add("Pedro Sampaio");
         buscarPorArtistas.add("Kelvin o Cris");
         buscarPorArtistas.add("Fernandinho");
 
@@ -55,9 +53,18 @@ public class PrincipalComListas {
         System.out.println("Depois da ordenação a lista ficou em: " + buscarPorArtistas);
 
         // Ordenando nossos filmes
-        System.out.println("Lista de filme ordenados:");
+        System.out.println("Lista de filme ordenados - Ordenando por nome");
         Collections.sort(listaDeFilmes);
         System.out.println(listaDeFilmes);
+
+        listaDeFilmes.sort(Comparator.comparing(Titulo::getAnoDeLancamento));
+        System.out.println("Usando o novo comparador - Ordenando por ano");
+        System.out.println(listaDeFilmes);
+
+        // Pegando o ultimo elemento da lista
+
+        System.out.println("Ultimo elemento da minha lista " + listaDeFilmes.getLast());
+        System.out.println("Verificando se esse elemento esta na minha lista: " + listaDeFilmes.contains(filme1));
 
 
 
