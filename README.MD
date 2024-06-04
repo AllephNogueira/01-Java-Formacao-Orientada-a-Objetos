@@ -1,2 +1,3 @@
-#Curso 1 finalizado
-#Curso2 POO em andamento no modulo 02
+Formação completa em Java Oriendado a Objetos
+
+Com leitura de APIS, criação de listas, JSON..
