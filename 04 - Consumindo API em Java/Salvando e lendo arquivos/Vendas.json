@@ -1,0 +1,16 @@
+[
+  {
+    "Id": 1,
+    "NomeProduto": "Acai 500",
+    "QuantidadeDeItensVendidos": 10,
+    "ValorProduto": 0.0,
+    "NomeVendedor": "Alleph"
+  },
+  {
+    "Id": 2,
+    "NomeProduto": "Acai 250",
+    "QuantidadeDeItensVendidos": 20,
+    "ValorProduto": 0.0,
+    "NomeVendedor": "Alleph"
+  }
+]
